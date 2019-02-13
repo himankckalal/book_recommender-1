@@ -221,50 +221,13 @@ book_tags = pd.read_csv('book_tags.csv', encoding = 'ISO-8859-1')
 book_tags.head()
 ```
 
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>goodreads_book_id</th>
-      <th>tag_id</th>
-      <th>count</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1</td>
-      <td>30574</td>
-      <td>167697</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>1</td>
-      <td>11305</td>
-      <td>37174</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>1</td>
-      <td>11557</td>
-      <td>34173</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>1</td>
-      <td>8717</td>
-      <td>12986</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>1</td>
-      <td>33114</td>
-      <td>12716</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
+| | goodreads_book_id | tag_id | count |
+| :--: | :--: | :--: | :--: |
+| 0 | 1 | 30574 | 167697 |
+| 1 | 1 | 11305 | 37174 |
+| 2 | 1 | 11557 | 34173 |
+| 3 | 1 | 8717 | 12986 |
+| 4 | 1 | 33114 | 12716 |
 
 
 
@@ -388,46 +351,13 @@ temp_df = books_with_tags.groupby('book_id')['tag_name'].apply(' '.join).reset_i
 temp_df.head()
 ```
 
-
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>book_id</th>
-      <th>tag_name</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1</td>
-      <td>fantasy young-adult fiction harry-potter books...</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>2</td>
-      <td>fantasy children children-s all-time-favorites...</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>3</td>
-      <td>fantasy young-adult fiction harry-potter books...</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>5</td>
-      <td>fantasy young-adult fiction harry-potter books...</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>6</td>
-      <td>fantasy young-adult fiction harry-potter owned...</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-
+| | book_id | tag_name |
+| :--: | :--: | :--: |
+| 0 | 1 | fantasy young-adult fiction harry-potter books... |
+| 1 | 2 | fantasy children children-s all-time-favorites... |
+| 2 | 3 | fantasy young-adult fiction harry-potter books... |
+| 3 | 5 | fantasy young-adult fiction harry-potter books... |
+| 4 | 6 | fantasy young-adult fiction harry-potter owned... |
 
 
 ```python
@@ -637,73 +567,18 @@ results = pd.DataFrame(data = dict)
 results
 ```
 
-
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>CountVectorizer</th>
-      <th>TfidfVectorizer</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>Lord of the Flies</td>
-      <td>1984</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>The Great Gatsby</td>
-      <td>The Great Gatsby</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>1984</td>
-      <td>Animal Farm / 1984</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>Of Mice and Men</td>
-      <td>Keep the Aspidistra Flying</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>Brave New World</td>
-      <td>Lord of the Flies</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>The Catcher in the Rye</td>
-      <td>Cry, the Beloved Country</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>Fahrenheit 451</td>
-      <td>Of Mice and Men</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>The Old Man and the Sea</td>
-      <td>The Fall of the House of Usher</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>Silas Marner</td>
-      <td>A Modest Proposal</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>To Kill a Mockingbird</td>
-      <td>A Modest Proposal and Other Satirical Works</td>
-    </tr>
-  </tbody>
-</table>
-</div>
+| | CountVectorizer | TfidfVectorizer |
+| :--: | :--: | :--: |
+| 0 | Lord of the Flies | 1984 |
+| 1 | The Great Gatsby | The Great Gatsby |
+| 2 | 1984 | Animal Farm / 1984 |
+| 3 | Of Mice and Men | Keep the Aspidistra Flying |
+| 4 | Brave New World | Lord of the Flies |
+| 5 | The Catcher in the Rye | Cry, the Beloved Country |
+| 6 | Fahrenheit 451 | Of Mice and Men |
+| 7 | The Old Man and the Sea | The Fall of the House of Usher |
+| 8 | Silas Marner | A Modest Proposal |
+| 9 | To Kill a Mockingbird | A Modest Proposal and Other Satirical Works |
 
 
 
-
-```python
-
-```
