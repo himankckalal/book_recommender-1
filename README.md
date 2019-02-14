@@ -1,4 +1,4 @@
-## Content based book recommender system
+## Content based book recommendation system
 
 ```python
 import numpy as np
