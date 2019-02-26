@@ -81,7 +81,9 @@ books = pd.read_csv('/gdrive/My Drive/app/books.csv', encoding = 'ISO-8859-1', i
                                                 'book_id': pred_id}))
 #for i in range(len(pred_id)):
 #    print('Predicted rating by user ', pred_user[i], ' for ', books.loc[pred_id[i]]['title'], ' is ', results[i])
-    
+
+
+# Predict user's rating for centain book
 def DL_predict(user_id, book_id):
     result = model.predict_classes(pd.DataFrame({'user_id': [user_id], 
                                                 'book_id': [book_id]}))                                                
