@@ -2,8 +2,6 @@
 
 import numpy as np
 import pandas as pd
-from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.metrics.pairwise import linear_kernel
 
 ratings = pd.read_csv('/gdrive/My Drive/app/ratings.csv', encoding = 'ISO-8859-1')
 print(ratings.head())
@@ -28,11 +26,7 @@ join2 = join1.join(topi, on = 'book_id', how = 'inner', rsuffix = '_r')
 pd.crosstab(join2.user_id, join2.book_id, join2.rating, aggfunc = np.sum)
 
 
-from sklearn.preprocessing import StandardScaler
-from sklearn.model_selection import train_test_split
-from sklearn.metrics import classification_report
-
-from keras.layers import Dense, Dropout, Flatten, Embedding, Input, Dot
+from keras.layers import Dense, Dropout, Flatten, Embedding, Input
 from keras.models import Sequential, Model
 from keras.callbacks import EarlyStopping
 from keras.optimizers import Adam
